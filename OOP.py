@@ -33,3 +33,18 @@
             #遵守变量命名的规范
             #大驼峰
             #尽量避开跟系统命名相似的命名
+        #如何声明一个类
+            #必须用class关键字
+            #类由属性和方法构成，其他不允许出现
+            #成员属性定义可以直接使用变量赋值，如果没有，用None赋值
+            #案例01.py
+    #anaconda基本使用
+        #anaconda主要是一个虚拟环境管理器
+        #还是一个安装包管理器
+        # window 环境下：cmd->conda 判断anaconda环境是否安装成功
+        # 命令解释:
+        #conda list:显示anaconda安装的包
+        #conda env list:显示anaconda的虚拟环境列表
+            #显示base，base是指的系统自动给我们安装的一个默认虚拟环境
+        #conda create -n xxx python = 3.6  -- 创建python版本为3.6的虚拟环境，名称叫xxx
+
