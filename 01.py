@@ -16,19 +16,23 @@ class PythonStudent():
     age = 18
     course = "Python"
 
-    #需要主意
+    #需要注意
     # def的缩进级别需要主意，在class后面一个级别，跟内部变量一个级别
     # 系统默认由一个self参数[后续确认是什么？]
     def doHomeWork(self):
         print("i doing the homework")
         #推荐在函数末尾使用return语句，无返回就用return none
         return None
-
+    def doHomeWork2():
+        print("i doing the homework about not self.{0}".format(__class__.age))
+        return None
 
 
 #实例化一个叫jay的对象
 jay = PythonStudent()
 jay.doHomeWork()
+PythonStudent.doHomeWork2()
+#jay.doHomeWork2()
 jay.name = "jay"
 print(jay.name)
 
@@ -37,6 +41,7 @@ print(jay.name)
 #class_name.__dict__
 print(PythonStudent.__dict__)
 print(jay.__dict__)
+
 
 
 
