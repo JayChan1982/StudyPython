@@ -32,7 +32,11 @@ jay.doHomeWork()
 jay.name = "jay"
 print(jay.name)
 
-
+#内置函数列举类的变量和函数
+#obj.__dict__
+#class_name.__dict__
+print(PythonStudent.__dict__)
+print(jay.__dict__)
 
 
 
