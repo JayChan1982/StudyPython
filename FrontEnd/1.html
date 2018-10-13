@@ -26,15 +26,65 @@
 <p>这个是段落标签，一般用于描述文章</p>
 <!--强制换行标签： br -->
 <p>这个是段落标签，一般用于描述文章</p>
-<!--常用的列表项是无序列表，-->
+<!--常用的列表项是无序列表，各浏览器之间样式有差别，需要通过CSS来进行界面统一处理-->
 <!--列表标签:  li 无序列表[常用的块级标签]-->
 <li>列表项1</li>
 <li>列表项2</li>
 <li>列表项3</li>
 <!--列表标签: ol li 有序列表[常用的块级标签]>-->
-<ol>
+<!--type 属性 是改变标识符的属性-->
+<!--start 属性 是告诉列表从第几个项开始标记 -->
+<ol type = "A" start = "2">
     <li>这是有序列表项1</li>
     <li>这是有序列表项2</li>
 </ol>
+<!--自定义列表标签 dl dd dt -->
+<dl>
+    <!--自定义列表的标题-->
+    <dt>这是自定义列表</dt>
+    <!--自定义列表的解释-->
+    <dd>这是自定义列表</dd>
+    <dd>这是自定义列表</dd>
+</dl>
+<!--表格标签:  申明一个表格 table  行: tr  列: td>
+<!--表格标签 table tr td [常用的块级标签]-->
+<!--表格标签 border      属性 : 边框-->
+<!--表格标签 cellpadding 属性 : 内容距离边框的距离-->
+<!--表格标签 cellspacing 属性 : 单元格和单元格之间的距离-->
+<!--表格标签 rowspan     属性 : 垂直合并(跨行显示)-->
+<!--表格标签 colspan     属性 : 水平合并(跨列显示)-->
+<!--表格标签 anailn      属性 : 内容水平对齐方式-->
+<!--表格标签 valign      属性 : 内容垂直对齐方式-->
+<!--px 是像素位-->
+<table border="5" cellpadding="10px" cellspacing="0px" width="500px" height="300px">
+    <!--表格标签: th 是表头标签 默认样式: 字体加粗、居中显示-->
+    <th colspan="4" >
+        这是表头
+    </th>
+    <tr align="center">
+        <td>列1</td>
+        <td>列2</td>
+        <td>列3</td>
+        <td>列4</td>
+    </tr>
+    <tr align="center" valign="bottom">
+        <td>Jaychan</td>
+        <td>18</td>
+        <td>wuxishi</td>
+        <td>214000</td>
+    </tr>
+  <tr align="center" valign="top">
+        <td>Jaychan</td>
+        <td>18</td>
+        <td>wuxishi</td>
+        <td>214000</td>
+    </tr>
+    <tr>
+        <td>jaychan</td>
+        <td>18</td>
+        <td>wuxishi</td>
+        <td>214000</td>
+    </tr>
+</table>
 </body>
 </html>
