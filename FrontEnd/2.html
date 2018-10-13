@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--行级元素不独占一行-->
+    <title>html常用的行级标签(行级元素)</title>
+</head>
+<body>
+<!--
+    无语义:没有默认样式
+    有语义:有默认样式
+-->
+<!--有语义的行级元素-->
+<!--超链接标签 : a -->
+<!--跳转到外部地址-->
+<a href="http:\\www.sina.com">访问sina</a> <br>
+<!--跳转到内部地址-->
+<!--绝对路径:根指向盘符-->
+<a href="D:\\python\\StudyPython\\FrontEnd\\1-1.html">绝对路径</a> <br>
+<!--相对路径: 实际开发中要用相对路径-->
+<!--
+  ./  代表  当前目录
+ ../  代表  上层目录
+-->
+<!--target 属性 : _blank  指明在新窗口打开跳转的页面-->
+<a href="./1-1.html" target="_blank">相对路径</a><br>
+<!--通过 a 标签制作锚点-->
+<a href="#node1">访问节点1</a><br>
+<p>
+    <a name = "node1">节点1</a>
+</p>
+<p>
+    <a name="node2">节点2</a>
+</p>
+<!--
+图像标签 是单标签，不需要闭合。
+src     属性 是 图片的地址 [本地资源or网络资源]
+alt     属性 是 图片加载失败的替代文字  必须存在
+title   属性 是 图片的提示
+width   属性 是 图片的宽度
+height  属性 是 图片的高度
+注意： 宽度和高度，最好只设置一个，两个全部设置图片容易变形
+       实际开发中 只设置图片宽度， 高度会等比例放大或缩小
+-->
+<img src="../images/1.jpg" alt="显示异常" title="这个是美女大图" width="200">
+<!--
+文本标签:
+加粗标签 b\strong  b标签和strong标签的区别  strong标签具有强调意义   [strong SEO优化]
+斜体标签 i\em      i标签和em标签的区别      em标签具有强调意义       [em     SEO优化]
+-->
+<p>
+    <b>asdasdasd</b>
+    <i>asdasdsad</i>
+    <strong>asdadasdasd</strong>
+    <em>asdasdasdasdsa</em>
+</p>
+<!--
+    无语义的行级元素 span标签 配合 css使用
+-->
+<span>asdasdasdasdasdsadasdasdasdsa</span>
+<!--
+html中的实体字符
+&gt;  大于符号
+&lt;  小于符号
+&copy;
+&nbsp:  空格
+-->
+1>2 <br>
+1 &gt;2<br>
+<!--
+表单标签 form
+1、form  标签:来划定一个表单区域  必须存在的属性
+2、action属性:数据的提交地址      必须存在的属性
+3、method属性:提交方式 get/post  默认方式是get方式传输
+    get方式: 在表单提交的时候，是通过地址栏[url]进行数据传输的，数据会显示在url地址栏中，传输数据有大小限制 [根据浏览器的不同数据大小限制不同] ，相对来说不安全。
+    post方式:数据不通过地址栏[url]传输数据，相对来说安全，数据传输没有大小限制，一般表单制定post方式传输;
+4、type  属性:指定我们的表单类型[普通文本、密码框、单选框、多选框]
+             :必须要填写 name属性
+5、enctype属性 :  值[multipart/form-data] 如果表单当中有文件上传，必须添加这个属性
+               :  multipart/form-data 是默认值 用户文件转码，如果不转码后台是无法获取文件的
+6、disabled属性 : 禁用
+7、readonlu属性 : 只读
+8、placeholder属性 : 设置提示信息
+ -->
+<form action="" methon="" enctype="multipart/form-data">
+    <input type="text" name="username" value="1234"><br>
+    <input type="password" name="passwod" readonly="readonly" placeholder="请输入密码"><br>
+    <!--
+        单选框 type = "radio" 必须有name和value属性， 一组单选框的 name 属性的值必须相同
+                                        value值必须填写
+    -->
+    <input type="radio" name="sex" value="1">男<br>
+    <input type="radio" name="sex" value="0">女<br>
+    <!--
+        多选框 type = "checkbox"， 必须有name属性和value属性，并且name属性的值要相同[同一组
+    -->
+    <input type="checkbox" name="chk01" value="01">编程<br>
+    <input type="checkbox" name="chk02"  value="02">篮球<br>
+    <!--
+        下拉框 tupe = "select"> 必须配合option配合来使用
+    -->
+    <select name="education">
+        <option value="0">小学</option>
+        <option value="1">中学</option>
+    </select>
+    <br>
+    <!--
+        文件上传信息 type = ""
+    -->
+    <input type="file" name="file"><br>
+    <!--
+    文本域 textarea
+    -->
+    <textarea placeholder="请输入个人简历"></textarea><br>
+    <textarea>请输入个人简历</textarea><br>
+    <!--
+    提交按钮 :  type = "submit"
+             :  button标签
+             :  type = "reset"  重置按钮
+    -->
+    <input type="submit" value="确定" >
+    <button>提交</button>
+    <input type="reset" disabled="disabled">
+    <!--
+        隐藏域 : type = "hidden"
+        不需要用户查看和填写的信息
+        用于系统处理的
+    -->
+    <input type="hidden" name="hidden" value="1">
+</form>
+</body>
+</html>
