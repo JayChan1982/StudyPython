@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS样式表使用</title>
+    <!--
+        1、外链式 <link rel="stylesheet" type = "text/css"  href="css/main.css">               使用场景: 一般开发使用
+        2、潜入式 <style type="text/css">div{width:102px; height:100px; color:red} ...</style> 使用场景: 案例使用
+        3、内联式 <div style="width:100px"; height:100px; color:red>...</div>                  使用场景: 不建议使用
+        注意: 必须放在head标签中
+    -->
+    <!--执行优先级:
+        css三种使用方式中，存在优先级顺序，页面是由上向下加载。
+        离元素越近，谁的优先级就越高
+    -->
+    <!--外链式，通过link标签引入css文件 要在Head标签当中引入-->
+    <link rel="stylesheet" href="./css libs/3.css">
+    <!--嵌入式 -->
+    <!--<style type="text/css">
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+        }
+    </style>
+    -->
+    <!--
+        内嵌式
+    -->
+    <!--<div style="width: 200px;height: 200px;background-color: blue">
+        sad
+    </div>
+    -->
+</head>
+<body>
+    <!--
+    标签选择器
+    -->
+    <div></div>
+    <!--
+        class选择器
+    -->
+    <div class="item1"></div>
+    <div class="item2"></div>
+    <!--
+        id选择器
+    -->
+    <div id="box1"></div>
+    <!--
+    层级选择器
+    -->
+    <div class="warp">
+        <div></div>
+    </div>
+<!--
+并列选择器也成为组选择器
+关系选择器可以给相同的元素设置相同的样式
+要求一下三个元素的宽度和高度都为200px
+b1背景为:红色
+b2背景为:绿色
+b3背景为:蓝色
+-->
+<div class="b1"></div>
+<p class="b2"></p>
+<div class="b3"></div>
+<!--
+伪类选择器
+hover 设置鼠标悬停在元素上时的状态
+-->
+<div class="box">love</div>
+</body>
+</html>
