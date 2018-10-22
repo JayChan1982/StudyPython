@@ -1,0 +1,46 @@
+.font{
+
+    /*
+        chorme浏览器 默认 字体大小是 16px
+        chorme浏览器      字体最小为 12px，当字体小于12px，字体也以12px来显示
+     */
+    font-size: 20px;
+    /*
+        字体颜色
+     */
+    color: #369;
+    /*
+        设置字体  chorme浏览器 默认是 微软雅黑 ; 如果客户浏览器没有设置的字体，将以默认字体显示
+     */
+    font-family: "宋体";
+    /*
+        设置字体样式 斜体
+     */
+    font-style: italic;
+    /*
+        字体加粗
+     */
+    font-weight: bold;
+    /*
+        设置行高
+        line-height: 35px;
+     */
+    width: 500px;
+    height: 500px;
+    background-color: whitesmoke;
+    /*
+        利用 line-height设置单行文本的垂直居中
+        注意: 在设置单行文本垂直居中的时候，值给父级元素的高度
+     */
+    line-height: 500px;
+    /*
+        去掉文字的下划线
+        注意:用类选择器，通过text-decoration:none;属性无法让超链接下划线去掉  需要找到原因？
+            :而id选择器，通过text-decoration:none;属性可以让超链接下划线去掉
+        text-decoration: none;
+     */
+
+}
+#aaa{
+    text-decoration:none;
+}
